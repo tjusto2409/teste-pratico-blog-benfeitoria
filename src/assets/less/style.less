@@ -1,6 +1,6 @@
 @import 'library.less';
 
-// Init
+// Default
 .title {
     .setFont(21px, @black, 'Bold');
 }
@@ -10,7 +10,8 @@
 }
 
 .link {
-    .setFont(16px, @black, 'Regular');
+    .setFont(16px, @blue, 'Regular');
+    text-decoration: underline;
 }
 
 .content {
@@ -24,7 +25,12 @@ button {
 }
 
 figure {
-    width: 100%;
+    img {
+        width: 100%; display: block;
+    }
 }
 
 // Box
+header {
+    background: @pink; padding: 15px;
+}
