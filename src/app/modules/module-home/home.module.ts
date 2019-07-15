@@ -7,6 +7,7 @@ import { SharedModule } from '../../shared/shared.module';
 
 // Components
 import { HomeComponent } from './home/home.component';
+import { PostModule } from '../module-post/post.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    PostModule
   ],
   exports: [
     HomeComponent

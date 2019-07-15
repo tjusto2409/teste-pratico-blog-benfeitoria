@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     routing,
     SharedModule,
-    HomeModule,
+    HomeModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
