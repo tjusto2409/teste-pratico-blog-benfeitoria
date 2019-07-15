@@ -5,10 +5,6 @@
     .setFont(21px, @black, 'Bold');
 }
 
-.label {
-    .setFont(18px, @black, 'Condensed');
-}
-
 .link {
     .setFont(16px, @pink, 'Regular');
     text-decoration: underline;    
@@ -34,7 +30,8 @@
 button {
     width: 100%; display: block;
     background: @pink; color: @white;
-    border-radius: 15px; padding: 10px 15px;
+    border-radius: 5px; padding: 10px 15px;
+    border: none;
 }
 
 figure {
@@ -47,6 +44,19 @@ figure {
     position: absolute; top: 50%;
     left: 50%; -webkit-transform: translate(0,-50%);
     transform: translate(-50%,-50%);
+}
+
+.group-input{
+    margin-bottom: 15px;
+
+    label {
+        .setFont(18px, @pink, 'Condensed');
+        display: block;
+    }
+    input {
+        width: 100%; padding: 5px 10px;
+        .setFont(14px, @black, 'Regular');
+    }
 }
 
 // Wrappers
@@ -62,24 +72,32 @@ header {
     }
 }
 
-.post {
-    &.header {
-        height: 490px; 
-        box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6) !important;
+section {
 
-        a {
-            height: 490px; display: block; position: relative;
-
-            .title {
-                font-size: 45px; color: @white; 
+    &.post {
+        &.header {
+            height: 490px; 
+            box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6) !important;
+    
+            a {
+                height: 490px; display: block; position: relative;
+    
+                .title {
+                    font-size: 45px; color: @white; 
+                }
             }
+        }    
+    
+        &.body {
+            padding: 50px 0; min-height: 500px;        
         }
-    }    
-
-    &.body {
-        padding: 50px 0; min-height: 500px;        
     }
-} 
+    
+    &.login {
+        height: 100vh; 
+    }
+}
+
 
 footer {
     min-height: 160px; background: @shadowPink; 

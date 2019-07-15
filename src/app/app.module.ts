@@ -6,6 +6,8 @@ import { NgModule } from '@angular/core';
 import { routing } from './core/routes/app.routing';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/module-home/home.module';
+import { AdminModule } from './modules/module-admin/admin.module';
+import { AdminRoutingModule } from './modules/module-admin/admin-routing.module';
 
 // Component Bootstrap (Inicializa a aplicação)
 import { AppComponent } from './app.component';
@@ -18,7 +20,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     routing,
     SharedModule,
-    HomeModule    
+    HomeModule,
+    AdminModule,
+    AdminRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

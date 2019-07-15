@@ -17,9 +17,6 @@ import { PostModule } from '../module-post/post.module';
     CommonModule,
     SharedModule,
     PostModule
-  ],
-  exports: [
-    HomeComponent
   ]
 })
 export class HomeModule { }
