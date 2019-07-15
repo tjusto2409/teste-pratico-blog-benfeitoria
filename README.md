@@ -1,27 +1,9 @@
-# Blog
+#Benfeitoria.com
+A Benfeitoria é um laboratório de inovação que nasceu para fomentar uma cultura mais humana, colaborativa e realizadora no Brasil. Começamos em 2011 com o financiamento coletivo (nosso principal experimento) e, de lá pra cá, mirabolamos diversos conteúdos, ferramentas e projetos, como o Rio+, a Universidade do Financiamento Coletivo e o Festival Reboot.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+Constantemente estamos procurando novas pessoas para trabalhar no nosso time técnico construindo as ferramentas que suportam o nosso trabalho em rede.
 
-## Development server
+#Teste Prático - Blog
+Esse é um teste prático para analisar seu conhecimento em desenvolvimento no geral, passando pela forma que você organiza o seu código e até como faz a lógica de certas partes do mesmo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+A aplicação que gostariamos de ver é um pequeno blog. Este possuirá apenas três páginas: A página inicial com listagem de postagens, uma página com contéudo de uma postagem específica e uma página administrativa para adicionar postagens.
