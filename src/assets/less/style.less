@@ -74,6 +74,10 @@ header {
 
 section {
 
+    &.login, &.admin-menu, &.admin-content {
+        height: 100vh; 
+    }
+
     &.post {
         &.header {
             height: 490px; 
@@ -92,12 +96,8 @@ section {
             padding: 50px 0; min-height: 500px;        
         }
     }
-    
-    &.login, &.menu-admin {
-        height: 100vh; 
-    }
 
-    &.menu-admin {
+    &.admin-menu  {
         background: @pink; padding: 0;
         .setShadow(3px, 0px, 23px, -9px, rgba(0,0,0,0.75));
 
@@ -116,6 +116,10 @@ section {
                 
             }
         }
+    }
+
+    &.admin-content {
+        overflow: auto;
     }
 }
 
@@ -164,14 +168,31 @@ footer {
     text-align: center;
 
     figure {
+        padding: 20px 0;
         img {
-            height: 250px; width: 265px;
-            margin: 0 auto 20px;
+            height: 250px; width: 250px;
+            margin: 0 auto;
         }
     }
 
     .title {
         margin-bottom: 5px; font-size: 25px;
     }
+
+    .content {
+        width: 45%; margin: 0 auto
+    }
 }
+
+.box-admin-posts {
+    background: url('../img/header-admin-post.jpg') no-repeat;
+    background-color: #F9B105; background-position: right; 
+    width: ~"calc(110% -10%)"; height: 220px;  
+    margin: 0 -15px; padding: 73px 20px;
+
+    .title {
+        text-transform: uppercase; color: @white;
+        font-size: 52px;
+    }
+} 
 
