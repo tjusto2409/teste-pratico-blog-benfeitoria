@@ -7,7 +7,6 @@ import { routing } from './core/routes/app.routing';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/module-home/home.module';
 import { AdminModule } from './modules/module-admin/admin.module';
-import { AdminRoutingModule } from './modules/module-admin/admin-routing.module';
 
 // Component Bootstrap (Inicializa a aplicação)
 import { AppComponent } from './app.component';
@@ -21,8 +20,7 @@ import { AppComponent } from './app.component';
     routing,
     SharedModule,
     HomeModule,
-    AdminModule,
-    AdminRoutingModule
+    AdminModule    
   ],
   providers: [],
   bootstrap: [AppComponent]

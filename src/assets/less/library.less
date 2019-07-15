@@ -34,3 +34,9 @@
     font-size: @size; color: @color; 
     font-family: @family;
 }
+
+.setShadow(@horiz, @vert, @blur, @radius, @shadow){
+    -webkit-box-shadow: @horiz @vert @blur @radius @shadow;
+    -moz-box-shadow: @horiz @vert @blur @radius @shadow;
+    box-shadow: @horiz @vert @blur @radius @shadow;
+}

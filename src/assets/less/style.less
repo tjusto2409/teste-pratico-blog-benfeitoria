@@ -93,8 +93,29 @@ section {
         }
     }
     
-    &.login {
+    &.login, &.menu-admin {
         height: 100vh; 
+    }
+
+    &.menu-admin {
+        background: @pink; padding: 0;
+        .setShadow(3px, 0px, 23px, -9px, rgba(0,0,0,0.75));
+
+        .title{
+            color: @white; background: @shadowPink; 
+            padding: 20px 10px; margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .link-nav {
+            display: block; margin-bottom: 5px;
+            padding: 10px;
+
+            &:hover {
+                color: @white; background: @shadowPink;
+                
+            }
+        }
     }
 }
 
@@ -137,5 +158,20 @@ footer {
 
 .box-post-content {
     padding: 50px 40px;
+}
+
+.box-default {
+    text-align: center;
+
+    figure {
+        img {
+            height: 250px; width: 265px;
+            margin: 0 auto 20px;
+        }
+    }
+
+    .title {
+        margin-bottom: 5px; font-size: 25px;
+    }
 }
 
