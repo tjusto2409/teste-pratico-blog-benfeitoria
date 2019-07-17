@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { Post } from './../../../shared/interface/post';
 
 @Component({
   selector: 'app-post-header',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-header.component.css']
 })
 export class PostHeaderComponent implements OnInit {
+
+  @Input() main: Post;
 
   constructor() { }
 

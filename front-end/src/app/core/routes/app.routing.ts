@@ -10,7 +10,7 @@ import { LoginComponent } from '../../modules/module-admin/login/login.component
 const APP_ROUTES: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'post-detail/:id', component: PostDetailComponent },    
+    { path: 'post-detail/:id', component: PostDetailComponent },
     { path: 'login', component: LoginComponent },
     { path: '**', component: PageNotFoundComponent }
 ];

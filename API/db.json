@@ -1,0 +1,26 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "titulo": "Post 1",
+            "autor": "Thiago",
+            "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue mattis sem, eu vulputate massa eleifend sit amet. In varius congue tellus vulputate convallis. Integer in venenatis libero, vitae vulputate elit. Ut maximus nisi at dui elementum dignissim. Ut non neque in dui mattis vehicula. In placerat in risus eu iaculis. Suspendisse rutrum porttitor varius. Curabitur sodales placerat erat non tristique.",
+            "img": "assets/img/default-post.png"
+        },
+        {
+            "id": 2,
+            "titulo": "Post 2",
+            "autor": "Thiago",
+            "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue mattis sem, eu vulputate massa eleifend sit amet. In varius congue tellus vulputate convallis. Integer in venenatis libero, vitae vulputate elit. Ut maximus nisi at dui elementum dignissim. Ut non neque in dui mattis vehicula. In placerat in risus eu iaculis. Suspendisse rutrum porttitor varius. Curabitur sodales placerat erat non tristique.",
+            "img": "assets/img/default-post.png"
+        },
+        {
+            "id": 3,
+            "titulo": "Post 3",
+            "autor": "Thiago",
+            "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue mattis sem, eu vulputate massa eleifend sit amet. In varius congue tellus vulputate convallis. Integer in venenatis libero, vitae vulputate elit. Ut maximus nisi at dui elementum dignissim. Ut non neque in dui mattis vehicula. In placerat in risus eu iaculis. Suspendisse rutrum porttitor varius. Curabitur sodales placerat erat non tristique.",
+            "img": "assets/img/default-post.png"
+        }
+    ]
+}
+  

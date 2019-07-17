@@ -2,10 +2,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <a [routerLink]="[ '/home']">
-                    <h1 class="title center">
-                        Primeiro Post
-                    </h1>
+                <a routerLink="/post-detail/1">
+                  <h1 class="title center" [innerHTML]="main?.titulo"></h1>
                 </a>
             </div>
         </div>
