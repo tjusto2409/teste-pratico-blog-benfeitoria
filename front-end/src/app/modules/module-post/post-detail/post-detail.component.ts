@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ServicoService } from '../../../core/servicos/servico.service';
+import { Post } from '../../../shared/interface/post';
 
 @Component({
   selector: 'app-post-detail',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostDetailComponent implements OnInit {
 
-  constructor() { }
+  post: Post;
+
+  constructor(private route: ActivatedRoute, private servico: ServicoService) { }
 
   ngOnInit() {
+    this.route.params.subscribe(
+      params => {
+        this.servico.getPost(params['id']).subscribe(
+          (post: Post) => this.post = post
+        )
+      }
+    )
   }
 
 }

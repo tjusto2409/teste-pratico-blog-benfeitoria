@@ -7,13 +7,17 @@
 
 .link {
     .setFont(16px, @pink, 'Regular');
-    text-decoration: underline;    
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline; color: @pink;
+    }
 }
 
 .link-nav {
     .setFont(@size: 16px; @color: @white; @family: 'Condensed');
 
-    &:hover {
+    &:hover, &:active  {
         text-decoration: none; color: @shadowPink;
     }
 }
@@ -32,6 +36,10 @@ button {
     background: @pink; color: @white;
     border-radius: 5px; padding: 10px 15px;
     border: none;
+
+    &:hover {
+        background: @shadowPink;
+    }   
 }
 
 figure {
@@ -56,6 +64,7 @@ figure {
     input {
         width: 100%; padding: 5px 10px;
         .setFont(14px, @black, 'Regular');
+        outline: none;
     }
 }
 
@@ -68,8 +77,20 @@ header {
 
         .link-nav {
             margin-right: 25px; 
+
+            &:last-child {
+                &:before {
+                    content: "|"; display: inline-block;
+                    height: 10px; width: 5px; color: @white;
+                    margin-left: -10px; margin-right: 5px;
+                }
+            }
         }
     }
+}
+
+main {
+    min-height: ~"calc(100vh - 170px)";
 }
 
 section {
@@ -78,22 +99,41 @@ section {
         height: 100vh; 
     }
 
+    &.header {
+        background: @gold; padding: 20px 20px;
+        text-align: center; margin-bottom: 40px;
+
+        h1 {
+            text-transform: uppercase; color: #fff;
+            font-size: 52px;
+        }
+    }
+
     &.post {
-        &.header {
-            height: 490px; 
+        .header {
+            height: 490px; display: block; position: relative;
             box-shadow: inset 0 0 0 1000px rgba(0,0,0,.6) !important;
-    
+            background-image: url('');
+            background-position: center; background-repeat: no-repeat;
+            background-size: cover;
+
             a {
                 height: 490px; display: block; position: relative;
+            }
     
-                .title {
-                    font-size: 45px; color: @white; 
-                }
+            .title {
+                font-size: 45px; color: @white; 
             }
         }    
     
         &.body {
             padding: 50px 0; min-height: 500px;        
+        }
+    }
+
+    &.login {
+        form {
+            margin-bottom: 20px;
         }
     }
 
@@ -160,7 +200,7 @@ footer {
     }
 }
 
-.box-post-content {
+.box-content {
     padding: 50px 40px;
 }
 
@@ -186,7 +226,7 @@ footer {
 
 .box-admin-posts {
     background: url('../img/header-admin-post.jpg') no-repeat;
-    background-color: #F9B105; background-position: right; 
+    background-color: @gold; background-position: right; 
     width: ~"calc(110% -10%)"; height: 220px;  
     margin: 0 -15px; padding: 73px 20px;
 

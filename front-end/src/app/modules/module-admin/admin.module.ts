@@ -18,7 +18,8 @@ import { DefaultComponent } from './admin/default/default.component';
     LoginComponent, 
     PostsComponent, 
     UsuarioComponent, 
-    AdminComponent, DefaultComponent
+    DefaultComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,

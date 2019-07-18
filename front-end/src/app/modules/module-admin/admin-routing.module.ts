@@ -8,7 +8,8 @@ import { PostsComponent } from './admin/posts/posts.component';
 
 const adminRoutes: Routes = [
   { path: 'admin', component: AdminComponent, children:[
-    { path: '', component: DefaultComponent },
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'dashboard', component: DefaultComponent },
     { path: 'usuario', component: UsuarioComponent },
     { path: 'posts', component: PostsComponent },
   ]}

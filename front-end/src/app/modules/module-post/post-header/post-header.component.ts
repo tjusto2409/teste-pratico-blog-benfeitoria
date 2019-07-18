@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Post } from './../../../shared/interface/post';
+import { HelperService } from '../../../core/helper/helper.service';
 
 @Component({
   selector: 'app-post-header',
@@ -10,10 +11,12 @@ import { Post } from './../../../shared/interface/post';
 export class PostHeaderComponent implements OnInit {
 
   @Input() main: Post;
+  flag: boolean;
 
-  constructor() { }
+  constructor(private helper: HelperService) { }
 
   ngOnInit() {
+    this.flag = (this.helper.getParseURL() == 'post-detail');
   }
 
 }

@@ -1,13 +1,15 @@
 <app-header></app-header>
 
 <main>
-    <app-post-header [main]="post"></app-post-header>
+    <section class="header">
+        <h1 class="title" [innerHTML]="pagina?.id"></h1>
+    </section>
 
     <section>
         <div class="container">
             <div class="row">
                 <div class="box-content">
-                    <div class="content" [innerHTML]="post?.texto"></div>
+                    <div class="content" [innerHTML]="pagina?.texto"></div>
                 </div>
             </div>
         </div>

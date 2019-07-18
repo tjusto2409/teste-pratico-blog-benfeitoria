@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private servico: ServicoService) { }
 
   ngOnInit() {
-    this.servico.getPost().subscribe(
+    this.servico.getPosts().subscribe(
       (posts: Post[]) => {
         for(let i=1; i < posts.length; i++) {
           this.posts.push(posts[i]);

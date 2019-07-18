@@ -3,19 +3,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-offset-4 col-xs-4">
-                    <figure>
-                        <img src="assets/img/logo-admin.png" alt="">
-                    </figure>
+                    <a routerLink="/">
+                        <figure class="logo">
+                            <img src="assets/img/logo-admin.png" alt="Benfeitoria Administração">
+                        </figure>
+                    </a>
                 </div>
                 <div class="col-xs-offset-4 col-xs-4">
                     <form action="">
                         <div class="group-input">
-                            <label for="">Email</label>
-                            <input type="text">
+                            <label for="email">Email</label>
+                            <input type="text" id="email">
                         </div>
                         <div class="group-input">
-                            <label for="">Senha</label>
-                            <input type="password">
+                            <label for="senha">Senha</label>
+                            <input type="password" id="senha">
                         </div>
 
                         <div class="row">
@@ -24,6 +26,7 @@
                             </div>
                         </div>
                     </form>
+                    <a routerLink="/home" class="link">Voltar para a Página Inicial</a>
                 </div>
             </div>
         </div>

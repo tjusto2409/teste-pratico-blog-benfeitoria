@@ -5,10 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigService {
 
-  root = 'http://localhost/Projetos/post-json/json/';
+  root = 'http://localhost:3000/';
 
   url = {
-    posts : this.root+'posts.json'
+    posts : this.root+'posts/',
+    paginas: this.root+'paginas/',
   };
 
   constructor() { }

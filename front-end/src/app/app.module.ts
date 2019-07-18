@@ -8,11 +8,9 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './modules/module-home/home.module';
 import { AdminModule } from './modules/module-admin/admin.module';
 
-// Servicos
-import { ConfigService } from './core/config/config.service';
-
 // Component Bootstrap (Inicializa a aplicação)
 import { AppComponent } from './app.component';
+import { PaginasModule } from './modules/modules-paginas/paginas.module';
 
 @NgModule({
   declarations: [
@@ -23,10 +21,8 @@ import { AppComponent } from './app.component';
     routing,
     SharedModule,
     HomeModule,
+    PaginasModule,
     AdminModule
-  ],
-  providers: [
-    ConfigService
   ],
   bootstrap: [AppComponent]
 })

@@ -6,11 +6,13 @@ import { PageNotFoundComponent } from '../../shared/page-not-found/page-not-foun
 import { HomeComponent } from '../../modules/module-home/home/home.component';
 import { PostDetailComponent } from '../../modules/module-post/post-detail/post-detail.component';
 import { LoginComponent } from '../../modules/module-admin/login/login.component';
+import { PaginasComponent } from '../../modules/modules-paginas/paginas/paginas.component';
 
 const APP_ROUTES: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'post-detail/:id', component: PostDetailComponent },
+    { path: 'sobre', component: PaginasComponent },
     { path: 'login', component: LoginComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
