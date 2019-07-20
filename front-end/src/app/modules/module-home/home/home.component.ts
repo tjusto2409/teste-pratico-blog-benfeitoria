@@ -9,7 +9,14 @@ import { Post } from 'src/app/shared/interface/post';
 })
 export class HomeComponent implements OnInit {
 
-  main: Post;
+  main: Post = {
+    titulo : "Não temos Posts há exibir.",
+    id: 1,
+    autor: '',
+    texto: '',
+    img: ''
+  };
+
   posts: Post[] = [];
 
   constructor(private servico: ServicoService) { }
@@ -17,11 +24,14 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.servico.getPosts().subscribe(
       (posts: Post[]) => {
-        for(let i=1; i < posts.length; i++) {
-          this.posts.push(posts[i]);
-        }
+        if(posts.length > 0) {
 
-        this.main = posts[0];
+          for(let i=1; i < posts.length; i++) {
+            this.posts.push(posts[i]);
+          }
+
+          this.main = posts[0];
+        }
       }
     );
   }

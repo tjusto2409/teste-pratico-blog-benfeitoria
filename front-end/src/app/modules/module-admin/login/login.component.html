@@ -1,34 +1,34 @@
 <main>
     <section class="login">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-offset-4 col-xs-4">
-                    <a routerLink="/">
-                        <figure class="logo">
-                            <img src="assets/img/logo-admin.png" alt="Benfeitoria Administração">
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-xs-offset-4 col-xs-4">
-                    <form action="">
-                        <div class="group-input">
-                            <label for="email">Email</label>
-                            <input type="text" id="email">
-                        </div>
-                        <div class="group-input">
-                            <label for="senha">Senha</label>
-                            <input type="password" id="senha">
-                        </div>
+        <div class="container center">
+          <div class="row">
+              <div class="col-xs-offset-4 col-xs-4">
+                  <a routerLink="/">
+                      <figure class="logo">
+                          <img src="assets/img/logo-admin.png" alt="Benfeitoria Administração">
+                      </figure>
+                  </a>
+              </div>
+              <div class="col-xs-offset-4 col-xs-4">
+                  <form action="" [formGroup]="form" (ngSubmit)="logar()">
+                      <div class="group-input">
+                          <label for="email">Email</label>
+                          <input type="text" id="email" formControlName="email">
+                      </div>
+                      <div class="group-input">
+                          <label for="senha">Senha</label>
+                          <input type="password" id="senha" formControlName="senha">
+                      </div>
 
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <button type="submit">Entrar</button>
-                            </div>
-                        </div>
-                    </form>
-                    <a routerLink="/home" class="link">Voltar para a Página Inicial</a>
-                </div>
-            </div>
+                      <div class="row">
+                          <div class="col-xs-6">
+                              <button type="submit" [class.inactive]="form.invalid">Entrar</button>
+                          </div>
+                      </div>
+                  </form>
+                  <a routerLink="/home" class="link">Voltar para a Página Inicial</a>
+              </div>
+          </div>
         </div>
     </section>
 </main>

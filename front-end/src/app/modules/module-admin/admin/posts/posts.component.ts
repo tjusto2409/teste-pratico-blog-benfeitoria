@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicoService } from 'src/app/core/servicos/servico.service';
+
+import { Post } from 'src/app/shared/interface/post';
 
 @Component({
   selector: 'app-post',
@@ -6,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
 
-  constructor() { }
+  posts: Post[] = [];
+
+  constructor(private servico: ServicoService) { }
 
   ngOnInit() {
+
+    this.servico.getPosts().subscribe(
+      (posts: Post[]) => {
+        this.posts = posts;
+      }
+    );
   }
 
 }

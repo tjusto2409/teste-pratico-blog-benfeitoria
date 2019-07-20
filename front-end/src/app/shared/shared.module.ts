@@ -11,11 +11,15 @@ import { FooterComponent } from './footer/footer.component';
 import { HelperService } from '../core/helper/helper.service';
 import { ConfigService } from '../core/config/config.service';
 
+// Pipes
+import { LimiteCaracteresPipe } from './pipes/limite-caracteres.pipe';
+
 @NgModule({
   declarations: [
     PageNotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LimiteCaracteresPipe
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,8 @@ import { ConfigService } from '../core/config/config.service';
   exports: [
     PageNotFoundComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LimiteCaracteresPipe
   ]
 })
 export class SharedModule { }

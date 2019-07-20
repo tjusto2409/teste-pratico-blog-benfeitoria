@@ -39,7 +39,12 @@ button {
 
     &:hover {
         background: @shadowPink;
-    }   
+    }
+
+    &.inactive {
+      background: @lightGray; color: @gray;
+      pointer-events: none;
+    }
 }
 
 figure {
@@ -62,7 +67,7 @@ figure {
         display: block;
     }
     input {
-        width: 100%; padding: 5px 10px;
+        width: 100%; padding: 6px 10px;
         .setFont(14px, @black, 'Regular');
         outline: none;
     }
@@ -76,13 +81,13 @@ header {
         padding: 10px 0;
 
         .link-nav {
-            margin-right: 25px; 
+            margin-right: 25px;
 
             &:last-child {
                 &:before {
-                    content: "|"; display: inline-block;
-                    height: 10px; width: 5px; color: @white;
-                    margin-left: -10px; margin-right: 5px;
+                  content: "|"; display: inline-block;
+                  height: 10px; width: 5px; color: @white;
+                  margin-left: -10px; margin-right: 5px;
                 }
             }
         }
@@ -90,18 +95,18 @@ header {
 }
 
 main {
-    min-height: ~"calc(100vh - 170px)";
+  min-height: ~"calc(100vh - 239px)";
 }
 
 section {
 
     &.login, &.admin-menu, &.admin-content {
-        height: 100vh; 
+        height: 100vh;
     }
 
     &.header {
-        background: @gold; padding: 20px 20px;
-        text-align: center; margin-bottom: 40px;
+        background: @blue; padding: 20px 20px;
+        text-align: center; margin: 5px 0 40px;
 
         h1 {
             text-transform: uppercase; color: #fff;
@@ -120,14 +125,14 @@ section {
             a {
                 height: 490px; display: block; position: relative;
             }
-    
+
             .title {
-                font-size: 45px; color: @white; 
+                font-size: 45px; color: @white;
             }
-        }    
-    
+        }
+
         &.body {
-            padding: 50px 0; min-height: 500px;        
+            padding: 50px 0; min-height: 500px;
         }
     }
 
@@ -142,7 +147,7 @@ section {
         .setShadow(3px, 0px, 23px, -9px, rgba(0,0,0,0.75));
 
         .title{
-            color: @white; background: @shadowPink; 
+            color: @white; background: @shadowPink;
             padding: 20px 10px; margin-bottom: 5px;
             text-transform: uppercase;
         }
@@ -153,18 +158,19 @@ section {
 
             &:hover {
                 color: @white; background: @shadowPink;
-                
+
             }
         }
     }
 
     &.admin-content {
-        overflow: auto;
+        overflow: auto; padding-bottom: 20px;
+        padding-left: -8.33333333%;
     }
 }
 
 footer {
-    min-height: 160px; background: @shadowPink; 
+    min-height: 160px; background: @shadowPink;
     padding: 15px 0;
 
     .link-nav {
@@ -187,7 +193,7 @@ footer {
     figure {
         img {
             height: 255px;
-        }   
+        }
     }
 
     .title {
@@ -200,7 +206,7 @@ footer {
 }
 
 .box-content {
-    padding: 50px 40px;
+  padding: 50px 15px;
 }
 
 .box-default {
@@ -225,13 +231,34 @@ footer {
 
 .box-admin-posts {
     background: url('../img/header-admin-post.jpg') no-repeat;
-    background-color: @gold; background-position: right; 
-    width: ~"calc(110% -10%)"; height: 220px;  
-    margin: 0 -15px; padding: 73px 20px;
+    background-color: @blue; background-position: right;
+    width: ~"calc(110% -10%)"; height: 220px;
+    margin: 0 -15px; padding: 75px 20px;
 
     .title {
         text-transform: uppercase; color: @white;
         font-size: 52px;
     }
-} 
+}
+
+.box-icon {
+  margin-top: 10px;
+
+  a {
+    margin-right: 10px; margin-top: 40px;
+    font-size: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.delete {
+      color: @pink;
+
+      &:hover {
+        color: @shadowPink;
+      }
+    }
+  }
+}
 

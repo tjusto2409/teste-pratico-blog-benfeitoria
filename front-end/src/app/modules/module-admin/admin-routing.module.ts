@@ -7,11 +7,14 @@ import { DefaultComponent } from './admin/default/default.component';
 import { PostsComponent } from './admin/posts/posts.component';
 
 const adminRoutes: Routes = [
-  { path: 'admin', component: AdminComponent, children:[
-    { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'admin', component: AdminComponent, children: [
+    // { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'dashboard', component: DefaultComponent },
     { path: 'usuario', component: UsuarioComponent },
-    { path: 'posts', component: PostsComponent },
+    { path: 'posts', component: PostsComponent, children: [
+      { path: 'adicionar', component: PostsComponent },
+      { path: 'editar/:id', component: PostsComponent }
+    ]},
   ]}
 ];
 

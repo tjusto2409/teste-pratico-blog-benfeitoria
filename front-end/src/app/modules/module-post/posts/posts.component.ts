@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HelperService } from '../../../core/helper/helper.service';
 
 @Component({
   selector: 'app-posts',
@@ -8,10 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostsComponent implements OnInit {
 
   @Input() posts;
+  flag: boolean;
 
-  constructor() { }
+  constructor(private helper: HelperService) { }
 
   ngOnInit() {
+    this.flag = (this.helper.getParseURL() == 'admin');
   }
 
 }

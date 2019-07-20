@@ -1,22 +1,13 @@
 <section class="post body">
     <div class="container">
 
-        <div class="box-post" *ngFor="let post of posts" >
-            <a routerLink="/post-detail/{{ post?.id }}">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <figure>
-                            <img [src]="post?.img" alt="">
-                        </figure>
-                    </div>
-                    <div class="col-xs-8">
-                        <h1 class="title" [innerHTML]="post?.titulo"></h1>
-                        <p class="mark" [innerHTML]="post?.autor"></p>
-                        <p class="content" [innerHTML]="post?.texto"></p>
-                    </div>
-                </div>
-            </a>
-        </div>
+      <div class="box-post" *ngFor="let post of posts" >
+        <a routerLink="/post-detail/{{ post?.id }}" *ngIf="!flag" >
+          <app-box-post [post]="post"></app-box-post>
+        </a>
+
+        <app-box-post [post]="post" [flag]="flag" *ngIf="flag"></app-box-post>
+      </div>
 
     </div>
 </section>
