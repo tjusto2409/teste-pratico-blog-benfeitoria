@@ -16,7 +16,7 @@ Após instalar a dependencia descrita no link acima, vá até o diretório API e
 # Aplicação Angular
 Segue o link para rodar uma [aplicação Angular](https://angular.io/guide/setup-local). Após isso, vá na raiz do diretório `front-end`, instale as dependencias com o comando `npm install`. 
 
-Após isso é só navegar usando o comando `npm start`. 
+Após isso é só navegar usando o comando `ng serve`. 
 
 Para logar na parte da administração, segue o login:
 
