@@ -11,7 +11,8 @@ export class ConfigService {
   url = {
     posts : this.root+'posts/',
     paginas: this.root+'paginas/',
-    login: this.root+'usuario/?'
+    login: this.root+'usuario/?',  
+    categorias: this.root+'categorias',  
   };
 
   storageKey = {

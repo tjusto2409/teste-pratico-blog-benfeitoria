@@ -1,33 +1,36 @@
 {
   "posts": [
     {
-      "id": 1,
-      "autor": "Thiago",
-      "titulo": "Post 1",
-      "categoria_id": 1,
-      "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue mattis sem, eu vulputate massa eleifend sit amet. In varius congue tellus vulputate convallis. Integer in venenatis libero, vitae vulputate elit. Ut maximus nisi at dui elementum dignissim. Ut non neque in dui mattis vehicula. In placerat in risus eu iaculis. Suspendisse rutrum porttitor varius. Curabitur sodales placerat erat non tristique.",
-      "img": "assets/img/banner.jpg"
-    },
-    {
       "id": 2,
       "autor": "Thiago",
       "titulo": "Post 2",
+      "categoria_id": 1,
       "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue mattis sem, eu vulputate massa eleifend sit amet. In varius congue tellus vulputate convallis. Integer in venenatis libero, vitae vulputate elit. Ut maximus nisi at dui elementum dignissim. Ut non neque in dui mattis vehicula. In placerat in risus eu iaculis. Suspendisse rutrum porttitor varius. Curabitur sodales placerat erat non tristique.",
       "img": "assets/img/default-post.png"
     },
     {
-      "id": 3,
-      "autor": "Thiago",
       "titulo": "Post 3",
-      "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue mattis sem, eu vulputate massa eleifend sit amet. In varius congue tellus vulputate convallis. Integer in venenatis libero, vitae vulputate elit. Ut maximus nisi at dui elementum dignissim. Ut non neque in dui mattis vehicula. In placerat in risus eu iaculis. Suspendisse rutrum porttitor varius. Curabitur sodales placerat erat non tristique.",
-      "img": "assets/img/default-post.png"
+      "autor": "Thiago",
+      "categoria_id": 1,
+      "img": null,
+      "texto": "<p>Lorem</p>",
+      "id": 3
     },
     {
       "autor": "Thiago",
       "titulo": "teste",
+      "categoria_id": 1,
       "texto": "teste",
       "img": "assets/img/default-post.png",
       "id": 6
+    },
+    {
+      "titulo": "Post 4",
+      "autor": "Thiago",
+      "categoria_id": "1",
+      "img": null,
+      "texto": "<p>teste</p>",
+      "id": 7
     }
   ],
   "categorias": [

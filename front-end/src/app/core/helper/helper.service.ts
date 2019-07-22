@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router, UrlSegment, PRIMARY_OUTLET } from '@angular/router';
 
-import swal from 'sweetalert';
-
 import { ConfigService } from './../config/config.service';
 
 
@@ -17,43 +15,47 @@ export class HelperService {
     this.router.navigate([rota]);
   }
 
-  getParseURL() {
+  getURL() {
     const segment: UrlSegment[] = this.router.parseUrl(this.router.url).root.children[PRIMARY_OUTLET].segments;
-    return segment[0].path;
+    return segment;
   }
 
-  alertWarning(text, confirm, cancel = 'Cancelar') {
-    return swal({
-      icon: 'warning',
-      title: 'Fique Atento!',
-      text: text,
-      buttons: {
-        confirm: {
-          text: confirm
-        },
-        cancel: {
-          text: cancel,
-          visible: true
-        }
-      }
-    });
-  }
+  getParseURL() {
+    return this.getURL()[0].path;
+  }  
 
-  alertError(text, title = 'Erro ao processar sua recarga!') {
-    return swal({
-      icon: 'error',
-      title: title,
-      text: text
-    });
-  }
+  // alertWarning(text, confirm, cancel = 'Cancelar') {
+  //   return swal({
+  //     icon: 'warning',
+  //     title: 'Fique Atento!',
+  //     text: text,
+  //     buttons: {
+  //       confirm: {
+  //         text: confirm
+  //       },
+  //       cancel: {
+  //         text: cancel,
+  //         visible: true
+  //       }
+  //     }
+  //   });
+  // }
 
-  alertSucesso(text, title = 'Recarga efetuada com sucesso!') {
-    return swal({
-      icon: 'success',
-      title: title,
-      text: text
-    });
-  }
+  // alertError(text, title = 'Erro ao processar sua recarga!') {
+  //   return swal({
+  //     icon: 'error',
+  //     title: title,
+  //     text: text
+  //   });
+  // }
+
+  // alertSucesso(text, title = 'Recarga efetuada com sucesso!') {
+  //   return swal({
+  //     icon: 'success',
+  //     title: title,
+  //     text: text
+  //   });
+  // }
 
   setStorage(chave, valor){
     localStorage.setItem(chave, JSON.stringify(valor));

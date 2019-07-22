@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HelperService } from '../../../core/helper/helper.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private helper: HelperService) { }
 
   ngOnInit() {
+  }
+
+  sair() {
+    event.preventDefault();
+    localStorage.clear();
+    this.helper.next('/');
   }
 
 }

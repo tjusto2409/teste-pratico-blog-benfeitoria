@@ -23,7 +23,6 @@
     "@ckeditor/ckeditor5-build-classic": "^12.3.1",
     "js-sha1": "^0.6.0",
     "rxjs": "~6.4.0",
-    "sweetalert": "^2.1.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
   },

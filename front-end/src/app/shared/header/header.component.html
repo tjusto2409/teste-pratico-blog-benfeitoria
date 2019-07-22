@@ -1,7 +1,7 @@
 <header>
     <div class="container">
         <div class="row">
-            <div class="col-xs-2">
+            <div class="col-lg-2 col-xs-5">
                 <a routerLink="/">
                     <figure class="logo">
                         <img src="assets/img/logo.png" alt="">
@@ -9,13 +9,29 @@
                 </a>
             </div>
 
-            <div class="col-xs-offset-6 col-xs-4">
-                <nav>
+            <div class="col-lg-offset-6 col-lg-4 col-xs-offset-5 col-xs-2">
+                <div class="menu-responsive" (click)="open(nav)">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav #nav>
+                    <i class="fas fa-times" (click)="fechar(nav)"></i>
                     <a routerLink="/" class="link-nav">Home</a>
                     <a routerLink="/sobre" class="link-nav">Sobre</a>
-                    <a routerLink="/" class="link-nav">Contato</a>
-                    <a routerLink="/" class="link-nav">Categoria</a>
-                    <a routerLink="/admin" class="link-nav">Login</a>
+                    <a routerLink="/" class="link-nav">Contato</a>                    
+                    <ul class="dropdown">
+                        <li class="link-nav">
+                            Categoria                            
+                        </li>
+                        <ul>
+                            <li *ngFor="let categoria of categorias">
+                                <a routerLink="/" class="link-nav" [innerHTML]="categoria.nome"></a>  
+                            </li>
+                            <li>
+                                <a href="" class="link-nav">Todas as categorias</a>
+                            </li>
+                        </ul>
+                    </ul>
+                    <a routerLink="/admin" class="link-nav">Admin</a>
                 </nav>
             </div>
         </div>

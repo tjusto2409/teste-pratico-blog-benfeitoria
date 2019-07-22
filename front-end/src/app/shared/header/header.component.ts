@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicoService } from '../../core/servicos/servico.service';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  categorias;
+
+  constructor(private servico: ServicoService) { }
 
   ngOnInit() {
+    this.servico.getCategorias().subscribe(
+      categorias => this.categorias = categorias
+    )
+  }
+
+  open(nav){
+    nav.classList.add('open');
+  }
+
+  fechar(nav) {
+    nav.classList.remove('open');
   }
 
 }

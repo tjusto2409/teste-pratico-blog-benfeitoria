@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 header" [style.backgroundImage]="'url('+ main?.img +')'">
-                <a routerLink="/post-detail/1" *ngIf="!flag">
+                <a routerLink="/post-detail/{{ main?.id }}" *ngIf="!flag">
                   <h1 class="title center" [innerHTML]="main?.titulo"></h1>
                 </a>
 

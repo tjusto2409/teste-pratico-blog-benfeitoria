@@ -66,19 +66,30 @@ figure {
         .setFont(18px, @pink, 'Condensed');
         display: block;
     }
-    input {
+    input, select {
         width: 100%; padding: 6px 10px;
         .setFont(14px, @black, 'Regular');
         outline: none;
     }
 }
 
+.ck-editor__editable_inline {
+    height: 200px !important;
+    overflow: auto; .setFont(16px, @black, 'Regular');
+}
+
 // Wrappers
 header {
     background: @pink; padding: 15px 0;
 
+    .menu-responsive {
+        display: none; color: #FFF;
+    }
+
     nav {
         padding: 10px 0;
+
+        .fa-times { display: none }
 
         .link-nav {
             margin-right: 25px;
@@ -89,6 +100,86 @@ header {
                   height: 10px; width: 5px; color: @white;
                   margin-left: -10px; margin-right: 5px;
                 }
+            }
+        }
+        
+        .dropdown {
+            display: inline-block;
+            .link-nav {
+                &:before {
+                    content: ''
+                }
+            }
+
+            & > li {
+                cursor: pointer;                
+                & ~ ul {
+                    display: none;
+                }                
+            }
+
+            &:hover {
+                li ~ ul {
+                    display: block; position: absolute;
+                    z-index: 1; top: 30px; width: 180px;
+                    padding: 15px 10px; background: @pink;
+
+                    li {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .menu-responsive {
+            display: block;
+        }
+
+        nav {
+            display: none;  position: fixed;
+            z-index: 1;  top: 0;
+            left: 0;  background: #e31847;
+            width: 100%; height: 100vh;
+            padding: ~"calc(50% - 40px)" 0;
+
+            &.open {
+                display: block;
+                .fa-times {
+                    display: block; 
+                    position: absolute;  top: 15px;
+                    right: 15px; color: @shadowPink;
+                    font-size: 23px;
+                }
+            }
+
+            .link-nav {
+                display: block; margin-bottom: 15px;
+                text-align: center; font-size: 30px;
+                margin-right: 0;
+
+                &:last-child {
+                    &:before {
+                        content: ''
+                    }
+                }
+            }
+
+            .dropdown {
+                width: 100%; background: @shadowPink;
+                padding-top: 15px; overflow: hidden;
+
+                .link-nav {
+                    color: #FFF;
+                }
+
+                &:hover {
+                    li ~ ul { 
+                        position: relative; background: @shadowPink;
+                        top: -15px; width: 100%;
+                    }
+                }                
             }
         }
     }
@@ -111,6 +202,10 @@ section {
         h1 {
             text-transform: uppercase; color: #fff;
             font-size: 52px;
+        }
+
+        @media screen and (max-width: 800px) {
+            margin-bottom: 20px
         }
     }
 
@@ -184,7 +279,7 @@ footer {
 // Box
 .box-post {
     width: 100%; border: 1px solid @gray;
-    margin: 15px 0;
+    margin: 15px 0; padding: 1px;
 
     &:hover {
         border: 1px solid @pink;
@@ -203,10 +298,28 @@ footer {
     .content {
         margin-top: 15px;
     }
+
+    @media screen and (max-width: 800px) {
+        figure {
+            img {
+                height: 180px;
+            }
+        }
+    }
 }
 
 .box-content {
   padding: 50px 15px;
+
+  .content {     
+    p, strong {
+        margin-top: 10px; 
+    }    
+  }  
+
+  @media screen and (max-width: 800px) {
+        padding-top: 20px;
+    }
 }
 
 .box-default {
@@ -229,15 +342,22 @@ footer {
     }
 }
 
-.box-admin-posts {
-    background: url('../img/header-admin-post.jpg') no-repeat;
-    background-color: @blue; background-position: right;
+.box-admin-header {
+    // background: url('../img/header-admin-post.jpg') no-repeat;
+    background-color: @blue; 
+    // background-position: right;
     width: ~"calc(110% -10%)"; height: 220px;
     margin: 0 -15px; padding: 75px 20px;
 
     .title {
         text-transform: uppercase; color: @white;
         font-size: 52px;
+    }
+}
+
+.box-editor {
+    form {
+        margin-top: 40px;
     }
 }
 
