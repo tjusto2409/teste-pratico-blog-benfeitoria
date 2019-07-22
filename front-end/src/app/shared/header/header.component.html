@@ -9,7 +9,7 @@
                 </a>
             </div>
 
-            <div class="col-lg-offset-6 col-lg-4 col-xs-offset-5 col-xs-2">
+            <div class="col-lg-offset-6 col-lg-4 col-xs-offset-5 col-xs-2 nav-menu-responsive">
                 <div class="menu-responsive" (click)="open(nav)">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -17,17 +17,17 @@
                     <i class="fas fa-times" (click)="fechar(nav)"></i>
                     <a routerLink="/" class="link-nav">Home</a>
                     <a routerLink="/sobre" class="link-nav">Sobre</a>
-                    <a routerLink="/" class="link-nav">Contato</a>                    
+                    <a routerLink="/contato" class="link-nav">Contato</a>                    
                     <ul class="dropdown">
                         <li class="link-nav">
                             Categoria                            
                         </li>
                         <ul>
                             <li *ngFor="let categoria of categorias">
-                                <a routerLink="/" class="link-nav" [innerHTML]="categoria.nome"></a>  
+                                <a routerLink="/categoria/{{ categoria.id }}" class="link-nav" [innerHTML]="categoria.nome"></a>  
                             </li>
                             <li>
-                                <a href="" class="link-nav">Todas as categorias</a>
+                                <a routerLink="/categorias" class="link-nav">Todas as categorias</a>
                             </li>
                         </ul>
                     </ul>

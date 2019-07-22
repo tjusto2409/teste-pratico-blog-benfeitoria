@@ -1,36 +1,28 @@
 {
   "posts": [
     {
-      "id": 2,
+      "titulo": "Há uma voz",
       "autor": "Thiago",
-      "titulo": "Post 2",
-      "categoria_id": 1,
-      "texto": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue mattis sem, eu vulputate massa eleifend sit amet. In varius congue tellus vulputate convallis. Integer in venenatis libero, vitae vulputate elit. Ut maximus nisi at dui elementum dignissim. Ut non neque in dui mattis vehicula. In placerat in risus eu iaculis. Suspendisse rutrum porttitor varius. Curabitur sodales placerat erat non tristique.",
-      "img": "assets/img/default-post.png"
-    },
-    {
-      "titulo": "Post 3",
-      "autor": "Thiago",
-      "categoria_id": 1,
+      "categoria_id": "2",
       "img": null,
-      "texto": "<p>Lorem</p>",
+      "texto": "<p>teste</p>",
       "id": 3
     },
     {
-      "autor": "Thiago",
-      "titulo": "teste",
-      "categoria_id": 1,
-      "texto": "teste",
-      "img": "assets/img/default-post.png",
-      "id": 6
-    },
-    {
-      "titulo": "Post 4",
+      "titulo": "Há uma voz",
       "autor": "Thiago",
       "categoria_id": "1",
       "img": null,
       "texto": "<p>teste</p>",
-      "id": 7
+      "id": 4
+    },
+    {
+      "titulo": "Há uma voz",
+      "autor": "Thiago",
+      "categoria_id": "2",
+      "img": null,
+      "texto": "<p>teste</p>",
+      "id": 5
     }
   ],
   "categorias": [
@@ -52,8 +44,8 @@
   "usuario": [
     {
       "id": 1,
-      "usuario": "Thiago",
-      "email": "tjusto2409@gmail.com",
+      "usuario": "Admin",
+      "email": "dev@benfeitoria.com",
       "senha": 123456
     }
   ]

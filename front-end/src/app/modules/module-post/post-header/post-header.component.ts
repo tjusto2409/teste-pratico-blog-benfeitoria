@@ -19,4 +19,12 @@ export class PostHeaderComponent implements OnInit {
     this.flag = (this.helper.getParseURL() == 'post-detail');
   }
 
+  verificaImg(img) {
+    if(img == 'assets/img/default-post.png') {
+      return ''
+    } else {
+      return img
+    }
+  }
+
 }

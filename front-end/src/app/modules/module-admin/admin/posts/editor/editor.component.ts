@@ -20,6 +20,7 @@ export class EditorComponent implements OnInit {
   form: FormGroup;
   titulo: string;
   id: number;
+  categorias;
 
   constructor(private formBulder: FormBuilder, 
     private servico: ServicoService,
@@ -31,12 +32,16 @@ export class EditorComponent implements OnInit {
     this.form = this.formBulder.group({
       'titulo': [null, Validators.required],
       'autor': [null, Validators.required],
-      'categoria_id': ['Escolha a categoria', Validators.required],
+      'categoria_id': '',
       'img': null,
       'texto': [null, Validators.required],
     });
 
-    this.carregaDadosPost()
+    this.carregaDadosPost();
+
+    this.servico.getCategorias().subscribe(
+      categoria => this.categorias = categoria
+    )
   }
 
   verificaURLEditar(): boolean {
@@ -72,12 +77,17 @@ export class EditorComponent implements OnInit {
     if(this.form.valid) {
       if(this.verificaURLEditar()) {    
         this.servico.updatePost(this.id, this.form.value).subscribe(
-          res => console.log(res)
+          res => {
+            this.helper.alertSucesso('Post Atualizado com sucesso!')
+          }
         )
       }
       else {
         this.servico.savePost(this.form.value).subscribe(
-          res => console.log(res)
+          res => {
+            this.helper.alertSucesso('Post Salvo com sucesso!');
+            this.form.reset();
+          }
         )
       }
     }

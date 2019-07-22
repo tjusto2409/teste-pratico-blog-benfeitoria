@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   main: Post = {
     titulo : "Não temos Posts há exibir.",
+    categoria_id: '1',
     id: 1,
     autor: '',
     texto: '',

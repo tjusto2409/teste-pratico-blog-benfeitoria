@@ -1,7 +1,7 @@
 <div class="box-admin-header">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-lg-4 col-xs-12">
                 <h1 class="title">{{ titulo }}</h1>
             </div>
         </div>
@@ -12,7 +12,7 @@
     <div class="container">
         <form action="" [formGroup]="form" (ngSubmit)="salvar()">
             <div class="row">
-                <div class="col-xs-9">
+                <div class="col-lg-9 col-xs-12">
                     <div class="group-input">
                         <label for="titulo">Título</label>
                         <input type="text" id="titulo" formControlName="titulo">
@@ -24,7 +24,10 @@
                     <div class="group-input">
                         <label for="categoria">Categoria</label>
                         <select name="" id="categoria" formControlName="categoria_id">
-                            <option value="1">Arquitetura</option>
+                            <option value="">Escolha uma categoria</option>
+                            <option [value]="categoria?.id" *ngFor="let categoria of categorias">
+                                {{ categoria.nome }}
+                            </option>
                         </select>
                     </div>     
                     <div class="group-input">
@@ -36,7 +39,7 @@
                         <ckeditor [editor]="Editor" id="texto" formControlName="texto"></ckeditor>  
                     </div>         
                 </div>
-                <div class="col-xs-4">
+                <div class="col-lg-4 col-xs-12">
                     <button type="submit">Salvar</button>
                 </div>
             </div>

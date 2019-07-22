@@ -7,3 +7,18 @@ Constantemente estamos procurando novas pessoas para trabalhar no nosso time té
 Esse é um teste prático para analisar seu conhecimento em desenvolvimento no geral, passando pela forma que você organiza o seu código e até como faz a lógica de certas partes do mesmo.
 
 A aplicação que gostariamos de ver é um pequeno blog. Este possuirá apenas três páginas: A página inicial com listagem de postagens, uma página com contéudo de uma postagem específica e uma página administrativa para adicionar postagens.
+
+# API
+Utilizei o Json Server para simular uma API retornando JSON. Segue o link para [a link](https://github.com/typicode/json-server).
+
+Após instalar a dependencia descrita no link acima, vá até o diretório API e use o comando `json server --watch db.json` para rodar o servidor.
+
+# Aplicação Angular
+Segue o link para rodar uma aplicação Angular [a link](https://angular.io/guide/setup-local). Após isso, vá na raiz do diretório `front-end`, instale as dependencias com o comando `npm install`. 
+
+Após isso é só navegar usando o comando `npm start`. 
+
+Para logar na parte da administração, segue o login:
+
+`Email: dev@benfeitoria.com`
+`Senha: 123456`

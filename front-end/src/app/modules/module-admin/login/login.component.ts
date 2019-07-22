@@ -22,10 +22,13 @@ export class LoginComponent implements OnInit {
     private config: ConfigService, private servico: ServicoService) { }
 
   ngOnInit() {
+    if(localStorage.getItem(this.config.storageKey.token))
+      this.helper.next('admin')
+    
     this.form = this.formBulder.group({
-      'email': [null, Validators.required, Validators.email],
+      'email': [null, Validators.required],
       'senha': [null, Validators.required]
-    });
+    });    
   }
 
   logar() {
@@ -43,7 +46,7 @@ export class LoginComponent implements OnInit {
               this.helper.next('/admin');
             }
             else {
-              alert('erro');
+              this.helper.alertError('Email ou senha inválidos');
             }
           }
         );

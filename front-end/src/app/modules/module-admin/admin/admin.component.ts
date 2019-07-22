@@ -13,6 +13,19 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
   }
 
+  open(nav, box){
+    console.log(nav.children[1].classList.add('open'))
+    nav.classList.add('open');
+    nav.children[1].classList.add('open');
+    box.style.display = 'none';
+    // nav.
+  }
+
+  fechar(nav, box) {
+    nav.classList.remove('open');
+    box.style.display = 'block';
+  }
+
   sair() {
     event.preventDefault();
     localStorage.clear();

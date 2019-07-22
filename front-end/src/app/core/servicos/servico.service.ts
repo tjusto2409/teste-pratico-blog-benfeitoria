@@ -38,4 +38,8 @@ export class ServicoService {
   updatePost(id, body: Post) {
     return this.http.put(this.config.url.posts + id, body);
   }
+
+  deletePost(id) {
+    return this.http.delete(this.config.url.posts + id);
+  }
 }

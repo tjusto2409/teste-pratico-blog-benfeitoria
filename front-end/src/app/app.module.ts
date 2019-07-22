@@ -22,7 +22,7 @@ import { PaginasModule } from './modules/modules-paginas/paginas.module';
     SharedModule,
     HomeModule,
     PaginasModule,
-    AdminModule
+    AdminModule,
   ],
   bootstrap: [AppComponent]
 })

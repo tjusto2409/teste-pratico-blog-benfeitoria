@@ -1,9 +1,10 @@
 <main>
     <div class="container-fluid">
         <div class="row">
-            <section class="admin-menu col-xs-2">
+            <section class="admin-menu nav-menu-responsive col-xs-12 col-lg-2" #nav>
                 <h1 class="title">Administração</h1>
                 <nav>
+                  <i class="fas fa-times" (click)="fechar(nav, box)"></i>
                   <a routerLink="/" class="link-nav">Ir para o Site</a>
                   <a routerLink="posts" class="link-nav">Posts</a>
                   <a routerLink="paginas" class="link-nav">Páginas</a>
@@ -12,7 +13,11 @@
                 </nav>
             </section>
 
-            <section class="admin-content col-xs-10">
+            <div class="box-admin-menu-responsive" (click)="open(nav, box)" #box>
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <section class="admin-content col-xs-12 col-lg-10">
                 <router-outlet></router-outlet>
             </section>
         </div>

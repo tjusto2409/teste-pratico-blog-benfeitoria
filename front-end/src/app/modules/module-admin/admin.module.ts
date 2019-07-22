@@ -17,6 +17,8 @@ import { AdminComponent } from './admin/admin.component';
 import { DefaultComponent } from './admin/default/default.component';
 import { EditorComponent } from './admin/posts/editor/editor.component';
 
+// Serviços
+import { AuthService } from '../../core/guards/auth.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,9 @@ import { EditorComponent } from './admin/posts/editor/editor.component';
     DefaultComponent,
     AdminComponent,
     EditorComponent
+  ],
+  providers: [
+    AuthService
   ],
   imports: [
     CommonModule,

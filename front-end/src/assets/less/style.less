@@ -78,6 +78,57 @@ figure {
     overflow: auto; .setFont(16px, @black, 'Regular');
 }
 
+.nav-menu-responsive {
+    @media screen and (max-width: 800px) {
+        nav {
+            display: none;  position: fixed;
+            z-index: 1;  top: 0;
+            left: 0;  background: #e31847;
+            width: 100%; height: 100vh;
+            padding: ~"calc(50% - 40px)" 0;
+        
+            &.open {
+                display: block;
+                .fa-times {
+                    display: block; 
+                    position: absolute;  top: 15px;
+                    right: 15px; color: @shadowPink;
+                    font-size: 23px;
+                }
+            }
+        
+            .link-nav {
+                display: block; margin-bottom: 15px;
+                text-align: center; font-size: 30px;
+                margin-right: 0;
+        
+                &:last-child {
+                    &:before {
+                        content: ''
+                    }
+                }
+            }
+        
+            .dropdown {
+                width: 100%; 
+                padding-top: 15px; overflow: hidden;
+        
+                .link-nav {
+                    color: #FFF;
+                }
+        
+                &:hover {
+                    background: @shadowPink;
+                    li ~ ul { 
+                        position: relative; background: @shadowPink;
+                        top: -15px; width: 100%;
+                    }
+                }                
+            }
+        }
+    }
+}
+
 // Wrappers
 header {
     background: @pink; padding: 15px 0;
@@ -135,52 +186,6 @@ header {
     @media screen and (max-width: 800px) {
         .menu-responsive {
             display: block;
-        }
-
-        nav {
-            display: none;  position: fixed;
-            z-index: 1;  top: 0;
-            left: 0;  background: #e31847;
-            width: 100%; height: 100vh;
-            padding: ~"calc(50% - 40px)" 0;
-
-            &.open {
-                display: block;
-                .fa-times {
-                    display: block; 
-                    position: absolute;  top: 15px;
-                    right: 15px; color: @shadowPink;
-                    font-size: 23px;
-                }
-            }
-
-            .link-nav {
-                display: block; margin-bottom: 15px;
-                text-align: center; font-size: 30px;
-                margin-right: 0;
-
-                &:last-child {
-                    &:before {
-                        content: ''
-                    }
-                }
-            }
-
-            .dropdown {
-                width: 100%; background: @shadowPink;
-                padding-top: 15px; overflow: hidden;
-
-                .link-nav {
-                    color: #FFF;
-                }
-
-                &:hover {
-                    li ~ ul { 
-                        position: relative; background: @shadowPink;
-                        top: -15px; width: 100%;
-                    }
-                }                
-            }
         }
     }
 }
@@ -247,6 +252,10 @@ section {
             text-transform: uppercase;
         }
 
+        .fa-times {
+            display: none;
+        }
+
         .link-nav {
             display: block; margin-bottom: 5px;
             padding: 10px;
@@ -254,6 +263,20 @@ section {
             &:hover {
                 color: @white; background: @shadowPink;
 
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            & {
+                display: none;
+
+                &.open {
+                    display: block;
+
+                    nav {
+                        display: block
+                    }
+                }
             }
         }
     }
@@ -300,6 +323,9 @@ footer {
     }
 
     @media screen and (max-width: 800px) {
+        & {
+            height: 183px; overflow: hidden;
+        }
         figure {
             img {
                 height: 180px;
@@ -391,5 +417,14 @@ footer {
   p {
     text-align: center; margin-top: 10px;
   }
+}
+
+.box-admin-menu-responsive {
+    display: none;
+    @media screen and (max-width: 800px) {
+        display: block;
+        position: absolute; font-size: 26px; right: 15px;
+        top: 15px; color: #FFF; z-index: 1;
+    }
 }
 

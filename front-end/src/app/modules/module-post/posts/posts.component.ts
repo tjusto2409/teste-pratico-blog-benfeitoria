@@ -14,6 +14,7 @@ export class PostsComponent implements OnInit {
   constructor(private helper: HelperService) { }
 
   ngOnInit() {
+    console.log(this.posts)
     this.flag = (this.helper.getParseURL() == 'admin');
   }
 

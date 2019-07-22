@@ -17,6 +17,7 @@ export class PostsComponent implements OnInit {
 
     this.servico.getPosts().subscribe(
       (posts: Post[]) => {
+        console.log(posts)
         this.posts = posts;
       }
     );
